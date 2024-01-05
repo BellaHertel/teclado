@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 80vh; 
+  margin: 0; 
+}
+
+/* Variáveis */
+:root {
+  /* Sombras */
+  --sombra1: -3px -3px 7px #ffffff73;
+  --sombra2: 2px 2px 5px #5e687949;
+}
+
+/* Campo Teclado */
+.wrapper {
+  width: 750px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #dde1e7;
+  box-shadow:
+    var(--sombra1),
+    var(--sombra2);
+}
+
+/* Teclas: Fileira */
+.keys {
+  display: flex;
+  justify-content: center;
+}
+
+/* Teclas */
+input {
+  height: 50px;
+  width: 50px;
+  background: #dde1e7;
+  color: grey;
+  padding: 10px;
+  margin: 10px;
+  box-shadow:
+    var(--sombra1),
+    var(--sombra2);
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Teclas: Pressionadas */
+input:focus {
+  color: #3498db;
+  font-weight: 400;
+  font-size: 19px;
+  box-shadow:
+    inset var(--sombra1),
+    inset var(--sombra2);
+}
+
+/* Tamanhos diferentes Espaço e Del  */
+input[value="SPACE"] {
+  width: 60%; 
+}
+input[value="DEL"] {
+  width: 55px;
+}
+
+/* Del com negrito quando pressionado */
+input[value="DEL"]:focus {
+  font-weight: 700;
+}
